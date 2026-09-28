@@ -236,4 +236,18 @@
     });
   });
 
+
+
+  // Responsive navigation hardening
+  addEventListener('resize', () => {
+    if (innerWidth > 900) {
+      const mobileMenu = document.querySelector('.nav-links');
+      const menuButton = document.querySelector('.menu-toggle');
+      mobileMenu?.classList.remove('open');
+      menuButton?.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+      document.body.style.overflow = '';
+    }
+  }, { passive: true });
+
 })();

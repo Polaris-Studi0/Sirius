@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SIRIUS — ecosistemas digitales para negocios que quieren crecer.">
+  <meta name="theme-color" content="#070708">
+  <title>SIRIUS — Ecosistemas digitales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@200..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/sirius-star-transparent.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader-stage">
+      <div class="preloader-logo-mark"><img src="assets/sirius-star-white-v2.png" alt=""></div>
+      <div class="preloader-word">SIRIUS</div>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header" id="inicio">
+    <nav class="nav shell" aria-label="Navegación principal">
+      <a class="brand magnetic" href="#inicio" aria-label="SIRIUS inicio">
+        <span class="brand-logo brand-logo-header"><img src="assets/sirius-star-white-v2.png" alt="" aria-hidden="true"></span>
+        <span class="brand-word">SIRIUS</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
+        <span class="sr-only">Abrir menú</span><i></i><i></i>
+      </button>
+
+      <div class="nav-links" id="menu">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#ecosistema">Ecosistema</a>
+        <a href="#casos">Casos</a>
+        <a class="nav-cta magnetic" href="#contacto">Hablemos</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <!-- HERO: alto contraste, fondo oscuro y objeto luminoso -->
+    <section class="hero section-dark hero-stage spotlight-section" data-parallax-section>
+      <div class="hero-mesh" aria-hidden="true"></div>
+      <div class="hero-grid-lines" aria-hidden="true"></div>
+
+      <div class="shell hero-shell">
+        <div class="hero-top reveal">
+          <p class="eyebrow light">Diagnóstico · Estrategia · Implementación digital</p>
+          <p class="hero-side-note">Digitalizamos negocios<br>con una ruta a la medida.</p>
+        </div>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1 class="wordmark" aria-label="SIRIUS">
+              <span>S</span><span>I</span><span>R</span><span>I</span><span>U</span><span>S</span>
+            </h1>
+
+            <p class="hero-lead reveal">
+              Diagnosticamos el punto de partida de tu negocio y construimos una ruta digital clara,
+              con las herramientas adecuadas para mejorar visibilidad, conexión con clientes y crecimiento.
+            </p>
+
+            <div class="hero-offer reveal" aria-label="Qué ofrece SIRIUS">
+              <span><b>01</b> Diagnóstico del negocio</span>
+              <span><b>02</b> Ruta digital personalizada</span>
+              <span><b>03</b> Implementación y acompañamiento</span>
+            </div>
+
+            <div class="hero-actions reveal">
+              <a class="button button-light magnetic" href="#servicios"><span>Explorar servicios</span><b>↘</b></a>
+              <a class="button button-glass magnetic" href="#contacto"><span>Solicitar diagnóstico</span></a>
+            </div>
+          </div>
+
+          <div class="hero-object-wrap reveal" data-tilt data-tilt-intensity="16">
+            <div class="hero-object">
+              <div class="halo halo-a"></div>
+              <div class="halo halo-b"></div>
+              <div class="logo-symbol-3d">
+                <img src="assets/sirius-star-white-v2.png" alt="Símbolo de SIRIUS">
+              </div>
+              <div class="logo-shadow"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-meta reveal">
+          <span>Equipo 2</span>
+          <span>Medellín · Colombia</span>
+          <span>2026</span>
+        </div>
+      </div>
+
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>Scroll</span><i></i>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee marquee-white" aria-hidden="true">
+      <div class="marquee-track">
+        <span>DIAGNÓSTICO</span><b>✦</b><span>ESTRATEGIA</span><b>✦</b><span>DISEÑO</span><b>✦</b><span>TECNOLOGÍA</span><b>✦</b><span>CRECIMIENTO</span><b>✦</b>
+        <span>DIAGNÓSTICO</span><b>✦</b><span>ESTRATEGIA</span><b>✦</b><span>DISEÑO</span><b>✦</b><span>TECNOLOGÍA</span><b>✦</b><span>CRECIMIENTO</span><b>✦</b>
+      </div>
+    </section>
+
+    <!-- MANIFIESTO: blanco total -->
+    <section class="manifesto section-light">
+      <div class="shell manifesto-grid">
+        <div class="section-kicker reveal">Nuestra forma de pensar</div>
+        <div>
+          <p class="manifesto-title split-reveal">
+            No empezamos por una herramienta.
+          </p>
+          <p class="manifesto-title manifesto-accent split-reveal">
+            Empezamos por entender el negocio.
+          </p>
+        </div>
+      </div>
+      <div class="manifesto-orb" aria-hidden="true"></div>
+    </section>
+
+    <!-- QUIÉNES SOMOS: superficie cálida/bento -->
+    <section class="section team-section spotlight-section" id="nosotros">
+      <div class="shell">
+        <div class="section-kicker reveal">01 / Quiénes somos</div>
+        <div class="section-head reveal">
+          <h2>Cuatro perfiles.<br><span>Una sola dirección.</span></h2>
+          <p>Tecnología, comunicación, creatividad y visión comercial para convertir necesidades en soluciones digitales claras, organizadas y aplicables.</p>
+        </div>
+
+        <div class="team-bento">
+          <article class="team-card card-3d reveal team-card-dark" data-tilt data-tilt-intensity="5">
+            <div class="portrait-placeholder portrait-photo">
+              <img src="assets/danna.jpeg" alt="Danna Alejandra Restrepo Montoya">
+            </div>
+            <div class="team-info">
+              <span class="team-index">01</span>
+              <h3>Danna Alejandra<br>Restrepo Montoya</h3>
+              <p class="muted">Comunicación / Redes sociales</p>
+              <p>Danna conecta con SIRIUS desde la comunicación y el entorno digital. Su aporte se enfoca en fortalecer la presencia en redes sociales, organizar la comunicación de las marcas y crear contenidos que acerquen los negocios a sus clientes.</p>
+            </div>
+          </article>
+
+          <article class="team-card card-3d reveal team-card-light" data-tilt data-tilt-intensity="5">
+            <div class="portrait-placeholder portrait-alt portrait-photo">
+              <img src="assets/valentina.png" alt="Valentina Paola Simanca Bustamante">
+            </div>
+            <div class="team-info">
+              <span class="team-index">02</span>
+              <h3>Valentina Paola<br>Simanca Bustamante</h3>
+              <p class="muted">Creatividad / Innovación visual</p>
+              <p>Valentina aporta a SIRIUS desde la creatividad y la innovación visual. Su enfoque está en transformar ideas en propuestas gráficas coherentes, atractivas y funcionales, cuidando la identidad y la forma en que cada negocio se presenta en sus canales digitales.</p>
+            </div>
+          </article>
+
+          <article class="team-card card-3d reveal team-card-featured" data-tilt data-tilt-intensity="7">
+            <div class="portrait-placeholder portrait-photo">
+              <img src="assets/samuel.jpg" alt="Samuel Ceballos Gómez">
+            </div>
+            <div class="team-info">
+              <span class="team-index">03 / POLARIS</span>
+              <h3>Samuel Ceballos<br>Gómez</h3>
+              <p class="muted">Tecnología / Transformación digital</p>
+              <p>Samuel conecta con SIRIUS desde su interés por la tecnología, la innovación y la transformación digital. Su aporte se concentra en identificar y aprovechar plataformas y herramientas tecnológicas para potenciar la presencia de los negocios, organizar propuestas y estructurar los sistemas necesarios para implementar soluciones organizadas, escalables y aplicables.</p>
+            </div>
+          </article>
+
+          <article class="team-card card-3d reveal team-card-cream" data-tilt data-tilt-intensity="5">
+            <div class="portrait-placeholder portrait-warm portrait-photo">
+              <img src="assets/maria-jose.jpeg" alt="María José Pérez Silva">
+            </div>
+            <div class="team-info">
+              <span class="team-index">04</span>
+              <h3>María José<br>Pérez Silva</h3>
+              <p class="muted">Ventas / Relacionamiento</p>
+              <p>María José conecta con SIRIUS desde su interés por las ventas, el crecimiento empresarial y el relacionamiento con clientes. Su aporte se enfoca en comprender necesidades, identificar oportunidades comerciales y mantener una comunicación cercana que permita convertir las propuestas del equipo en soluciones de valor para cada negocio.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS: negro profundo -->
+    <section class="section services-section section-dark spotlight-section" id="servicios">
+      <div class="services-glow" aria-hidden="true"></div>
+      <div class="shell">
+        <div class="section-kicker light reveal">02 / Qué ofrecemos</div>
+        <div class="section-head dark-head reveal">
+          <h2>Una arquitectura digital.<br><span>No una lista de servicios.</span></h2>
+          <p>Activamos únicamente las piezas que aportan al negocio. Cada servicio se conecta con los demás.</p>
+        </div>
+
+        <div class="service-stack" id="serviceAccordion">
+          <article class="service-panel service-accordion reveal" data-service="01">
+            <button class="service-trigger" type="button" aria-expanded="false">
+              <div class="service-index">01</div>
+              <div class="service-copy">
+                <h3>Diagnóstico digital</h3>
+                <p>Entendemos el punto de partida antes de recomendar soluciones.</p>
+              </div>
+              <div class="service-pill">Diagnóstico</div>
+              <i class="service-toggle-icon" aria-hidden="true">+</i>
+            </button>
+            <div class="service-details" aria-hidden="true">
+              <div class="service-details-inner">
+                <p>Analizamos la presencia digital actual del negocio, sus canales, clientes, objetivos, recursos y principales dificultades. El resultado es una lectura clara de qué está funcionando, qué hace falta y qué debería priorizarse.</p>
+                <ul>
+                  <li>Revisión de canales y presencia actual.</li>
+                  <li>Identificación de brechas y oportunidades.</li>
+                  <li>Priorización según impacto y viabilidad.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-panel service-accordion reveal" data-service="02">
+            <button class="service-trigger" type="button" aria-expanded="false">
+              <div class="service-index">02</div>
+              <div class="service-copy">
+                <h3>Presencia digital</h3>
+                <p>Creamos una presencia coherente, clara y fácil de encontrar.</p>
+              </div>
+              <div class="service-pill">Presencia</div>
+              <i class="service-toggle-icon" aria-hidden="true">+</i>
+            </button>
+            <div class="service-details" aria-hidden="true">
+              <div class="service-details-inner">
+                <p>Definimos y construimos los puntos de contacto digitales que realmente necesita el negocio: desde una página web o landing page hasta Google Business Profile, catálogos y perfiles optimizados.</p>
+                <ul>
+                  <li>Página web, landing o catálogo digital.</li>
+                  <li>Optimización de perfiles y canales de descubrimiento.</li>
+                  <li>Coherencia visual y de información entre plataformas.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-panel service-accordion reveal" data-service="03">
+            <button class="service-trigger" type="button" aria-expanded="false">
+              <div class="service-index">03</div>
+              <div class="service-copy">
+                <h3>Contenido &amp; redes</h3>
+                <p>Convertimos la comunicación en una herramienta de conexión.</p>
+              </div>
+              <div class="service-pill">Contenido</div>
+              <i class="service-toggle-icon" aria-hidden="true">+</i>
+            </button>
+            <div class="service-details" aria-hidden="true">
+              <div class="service-details-inner">
+                <p>Organizamos la forma en que la marca comunica su propuesta, productos y servicios para que las redes sociales tengan una función clara dentro de la estrategia y no sean publicaciones aisladas.</p>
+                <ul>
+                  <li>Definición de pilares y línea de contenido.</li>
+                  <li>Planeación de publicaciones y formatos.</li>
+                  <li>Orientación para mantener consistencia y continuidad.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-panel service-accordion reveal" data-service="04">
+            <button class="service-trigger" type="button" aria-expanded="false">
+              <div class="service-index">04</div>
+              <div class="service-copy">
+                <h3>WhatsApp &amp; automatización</h3>
+                <p>Organizamos la atención y reducimos tareas repetitivas.</p>
+              </div>
+              <div class="service-pill">Automatización</div>
+              <i class="service-toggle-icon" aria-hidden="true">+</i>
+            </button>
+            <div class="service-details" aria-hidden="true">
+              <div class="service-details-inner">
+                <p>Diseñamos flujos que facilitan consultas, seguimiento y atención. Cuando tiene sentido, conectamos WhatsApp y otras herramientas para que el negocio responda mejor sin perder cercanía.</p>
+                <ul>
+                  <li>Organización de consultas frecuentes y rutas de atención.</li>
+                  <li>Automatización de tareas repetitivas.</li>
+                  <li>Integración progresiva con otros canales o sistemas.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-panel service-accordion reveal" data-service="05">
+            <button class="service-trigger" type="button" aria-expanded="false">
+              <div class="service-index">05</div>
+              <div class="service-copy">
+                <h3>Canales de venta</h3>
+                <p>Acercamos el negocio a los canales donde compran sus clientes.</p>
+              </div>
+              <div class="service-pill">Ventas</div>
+              <i class="service-toggle-icon" aria-hidden="true">+</i>
+            </button>
+            <div class="service-details" aria-hidden="true">
+              <div class="service-details-inner">
+                <p>Evaluamos qué canales pueden ampliar el alcance comercial del negocio y cómo integrarlos de manera ordenada a su operación, sin sumar herramientas que luego no puedan gestionarse.</p>
+                <ul>
+                  <li>Marketplaces y plataformas de domicilios.</li>
+                  <li>Catálogos y canales de venta directa.</li>
+                  <li>Selección de canales según sector, capacidad y cliente.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIADOR: metal / vidrio -->
+    <section class="section differentiator-section spotlight-section" id="diferenciador">
+      <div class="metal-orb metal-orb-a" aria-hidden="true"></div>
+      <div class="metal-orb metal-orb-b" aria-hidden="true"></div>
+
+      <div class="shell feature-grid">
+        <div class="feature-copy reveal">
+          <div class="section-kicker">03 / Nuestro diferenciador</div>
+          <h2>No vendemos una página web.<br><span>Diseñamos una ruta.</span></h2>
+          <p>Nuestro enfoque parte del diagnóstico: entendemos el negocio, sus clientes, capacidades y objetivos antes de recomendar una herramienta.</p>
+        </div>
+
+        <div class="feature-stack">
+          <article class="feature-card reveal">
+            <span>01</span>
+            <h3>Primero la necesidad</h3>
+            <p>La herramienta aparece después de entender el problema.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span>02</span>
+            <h3>Soluciones conectadas</h3>
+            <p>Web, redes, WhatsApp y canales de venta funcionan como un ecosistema.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span>03</span>
+            <h3>Acompañamiento</h3>
+            <p>Acompañamos la implementación, resolvemos dudas durante el proceso y orientamos al negocio para que pueda adoptar y utilizar correctamente las herramientas digitales seleccionadas.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span>04</span>
+            <h3>Escalabilidad</h3>
+            <p>La solución se diseña para evolucionar con el negocio: nuevos canales, automatizaciones y herramientas pueden incorporarse progresivamente sin tener que reconstruir todo desde cero.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ECOSISTEMA: azul-negro / profundidad -->
+    <section class="section ecosystem-section spotlight-section" id="ecosistema">
+      <div class="ecosystem-noise" aria-hidden="true"></div>
+      <div class="shell ecosystem-layout">
+        <div class="ecosystem-copy reveal">
+          <div class="section-kicker light">04 / Ecosistema digital</div>
+          <h2>Todo gira alrededor<br>del negocio.</h2>
+          <p>No se trata de estar en todos los canales. Se trata de conectar los correctos.</p>
+          <div class="ecosystem-legend">
+            <span>Web</span><span>Instagram</span><span>WhatsApp</span><span>Pauta</span><span>Ventas</span>
+          </div>
+        </div>
+
+        <div class="ecosystem-stage reveal" data-tilt data-tilt-intensity="5">
+          <div class="orbit orbit-1"></div>
+          <div class="orbit orbit-2"></div>
+          <div class="orbit orbit-3"></div>
+
+          <div class="ecosystem-center">
+            <div class="ecosystem-logo-card"><img src="assets/sirius-star-transparent.png" alt="Logo de SIRIUS"></div>
+            <span>Tu negocio</span>
+          </div>
+
+          <div class="ecosystem-node node-web">Web</div>
+          <div class="ecosystem-node node-instagram">Instagram</div>
+          <div class="ecosystem-node node-whatsapp">WhatsApp</div>
+          <div class="ecosystem-node node-ads">Pauta</div>
+          <div class="ecosystem-node node-sales">Ventas</div>
+
+          <div class="orbit-dot orbit-dot-a"></div>
+          <div class="orbit-dot orbit-dot-b"></div>
+          <div class="orbit-dot orbit-dot-c"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASOS: blanco / cartas grandes -->
+    <section class="section cases-section spotlight-section" id="casos">
+      <div class="shell">
+        <div class="section-kicker reveal">05 / Clientes & resultados</div>
+        <div class="section-head reveal">
+          <h2>El trabajo se demuestra.</h2>
+          <p>Espacios listos para agregar imágenes, resultados y aprendizajes de casos reales.</p>
+        </div>
+
+        <div class="case-grid">
+          <article class="case-card case-a reveal" data-tilt data-tilt-intensity="4">
+            <div class="case-visual">
+              <span>01</span>
+              <div class="case-visual-star"><img src="assets/sirius-star-transparent.png" alt=""></div>
+            </div>
+            <div class="case-body"><span>Caso 01</span><h3>[Nombre del cliente]</h3><p>[Problema → solución → resultado.]</p></div>
+          </article>
+
+          <article class="case-card case-b reveal" data-tilt data-tilt-intensity="4">
+            <div class="case-visual"><span>02</span><div class="case-placeholder">Imagen del caso</div></div>
+            <div class="case-body"><span>Caso 02</span><h3>[Nombre del cliente]</h3><p>[Problema → solución → resultado.]</p></div>
+          </article>
+
+          <article class="case-card case-c reveal" data-tilt data-tilt-intensity="4">
+            <div class="case-visual"><span>03</span><div class="case-placeholder">Imagen del caso</div></div>
+            <div class="case-body"><span>Caso 03</span><h3>[Nombre del cliente]</h3><p>[Problema → solución → resultado.]</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS: crema -->
+    <section class="section testimonials-section">
+      <div class="shell">
+        <div class="section-kicker reveal">06 / Opiniones</div>
+        <div class="testimonial-grid">
+          <blockquote class="reveal">
+            “Aquí irá una opinión real de un cliente cuando esté disponible.”
+            <footer>— [Nombre / empresa]</footer>
+          </blockquote>
+          <blockquote class="reveal">
+            “Aquí irá una segunda opinión real sobre el acompañamiento de SIRIUS.”
+            <footer>— [Nombre / empresa]</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL: negro -->
+    <section class="contact section-dark spotlight-section" id="contacto">
+      <div class="contact-rings" aria-hidden="true"></div>
+      <div class="shell contact-grid">
+        <div class="reveal">
+          <div class="section-kicker light">07 / Contacto</div>
+          <h2>¿Tu negocio está listo<br>para <span>brillar?</span></h2>
+        </div>
+
+        <div class="contact-actions reveal">
+          <p>Cuéntanos en qué punto está tu negocio y qué quieres mejorar. Te ayudamos a identificar una ruta digital adecuada.</p>
+          <a class="button button-light whatsapp-link magnetic"
+             href="#"
+             data-phone="573124521336"
+             data-message="Hola SIRIUS, quiero conocer más sobre sus servicios."
+             target="_blank"
+             rel="noopener noreferrer">
+            <span>Escribir por WhatsApp</span><b>↗</b>
+          </a>
+          
+        </div>
+      </div>
+
+      <div class="contact-logo-art" aria-hidden="true">
+        <div class="contact-logo-card"><img src="assets/sirius-star-white-v2.png" alt=""></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <div class="brand">
+        <span class="brand-logo small"><img src="assets/sirius-star-transparent.png" alt=""></span>
+        <span class="brand-word">SIRIUS</span>
+      </div>
+      <p>© 2026 SIRIUS. Proyecto académico.</p>
+      <a href="#inicio">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

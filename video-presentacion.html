@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
+  <meta
+    name="description"
+    content="Video presentación de SIRIUS. Conoce nuestra propuesta para impulsar la transformación digital de pequeñas empresas y emprendimientos."
+  >
+
+  <title>Video Presentación · SIRIUS</title>
+
+  <!-- CSS principal de la web -->
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- Antonio para el wordmark -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --video-bg: #050507;
+      --video-card: rgba(255, 255, 255, 0.045);
+      --video-border: rgba(255, 255, 255, 0.10);
+      --video-muted: rgba(255, 255, 255, 0.55);
+      --video-soft: rgba(255, 255, 255, 0.75);
+      --video-accent: #8ea0ff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--video-bg);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(
+          circle at 78% 22%,
+          rgba(90, 103, 255, 0.14),
+          transparent 32%
+        ),
+        radial-gradient(
+          circle at 18% 70%,
+          rgba(255,255,255,.04),
+          transparent 28%
+        ),
+        var(--video-bg);
+
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* =========================
+       HEADER
+       ========================= */
+
+    .video-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+
+      height: 72px;
+
+      display: flex;
+      align-items: center;
+
+      background: rgba(5, 5, 7, 0.68);
+
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+
+    .video-header-inner {
+      width: min(1280px, calc(100% - 48px));
+      margin: 0 auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .video-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .video-brand img {
+      width: 27px;
+      height: 27px;
+      object-fit: contain;
+    }
+
+    .video-brand span {
+      font-family: "Antonio", sans-serif;
+      font-size: 26px;
+      font-weight: 500;
+      letter-spacing: .10em;
+      line-height: 1;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      color: rgba(255,255,255,.66);
+      text-decoration: none;
+
+      font-size: 13px;
+
+      transition:
+        color .25s ease,
+        transform .25s ease;
+    }
+
+    .back-link:hover {
+      color: #fff;
+      transform: translateX(-3px);
+    }
+
+    /* =========================
+       HERO
+       ========================= */
+
+    .video-main {
+      width: min(1280px, calc(100% - 48px));
+      margin: 0 auto;
+
+      padding:
+        160px
+        0
+        100px;
+    }
+
+    .video-eyebrow {
+      margin-bottom: 24px;
+
+      color: var(--video-accent);
+
+      font-size: 11px;
+      font-weight: 600;
+
+      text-transform: uppercase;
+      letter-spacing: .18em;
+    }
+
+    .video-heading {
+      max-width: 1050px;
+      margin: 0;
+
+      font-size: clamp(64px, 9vw, 140px);
+      line-height: .88;
+
+      letter-spacing: -.065em;
+      font-weight: 500;
+    }
+
+    .video-heading span {
+      color: rgba(255,255,255,.38);
+    }
+
+    .video-intro {
+      display: grid;
+      grid-template-columns:
+        minmax(0, 1fr)
+        minmax(260px, 420px);
+
+      gap: 50px;
+
+      align-items: end;
+
+      margin-top: 50px;
+      margin-bottom: 70px;
+    }
+
+    .video-intro p {
+      max-width: 680px;
+
+      margin: 0;
+
+      color: rgba(255,255,255,.68);
+
+      font-size: clamp(17px, 1.7vw, 24px);
+      line-height: 1.4;
+
+      letter-spacing: -.02em;
+    }
+
+    .video-meta {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 14px;
+
+      color: rgba(255,255,255,.40);
+
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+    }
+
+    .video-meta::before {
+      content: "";
+      width: 42px;
+      height: 1px;
+      background: rgba(255,255,255,.25);
+    }
+
+    /* =========================
+       PLAYER
+       ========================= */
+
+    .player-shell {
+      position: relative;
+
+      padding: 10px;
+
+      border-radius: 34px;
+
+      border: 1px solid var(--video-border);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.07),
+          rgba(255,255,255,.018)
+        );
+
+      box-shadow:
+        0 60px 150px rgba(0,0,0,.60),
+        inset 0 1px 0 rgba(255,255,255,.08);
+
+      overflow: hidden;
+    }
+
+    .player-shell::before {
+      content: "";
+
+      position: absolute;
+
+      width: 420px;
+      height: 420px;
+
+      right: -130px;
+      top: -200px;
+
+      border-radius: 50%;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(142,160,255,.18),
+          transparent 68%
+        );
+
+      pointer-events: none;
+    }
+
+    .video-player {
+      position: relative;
+
+      width: 100%;
+      aspect-ratio: 16 / 9;
+
+      overflow: hidden;
+
+      border-radius: 26px;
+
+      background: #000;
+    }
+
+    .video-player video {
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+
+      background: #000;
+    }
+
+    /* =========================
+       INFORMACIÓN INFERIOR
+       ========================= */
+
+    .video-bottom {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, .7fr)
+        minmax(0, 1.3fr);
+
+      gap: 70px;
+
+      margin-top: 80px;
+
+      padding-top: 38px;
+
+      border-top: 1px solid rgba(255,255,255,.10);
+    }
+
+    .video-bottom-label {
+      color: rgba(255,255,255,.38);
+
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+    }
+
+    .video-bottom-content h2 {
+      margin:
+        0
+        0
+        20px;
+
+      font-size: clamp(36px, 5vw, 64px);
+      line-height: .96;
+
+      letter-spacing: -.045em;
+      font-weight: 500;
+    }
+
+    .video-bottom-content p {
+      max-width: 720px;
+
+      margin: 0;
+
+      color: rgba(255,255,255,.56);
+
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    .home-button {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      min-height: 50px;
+
+      margin-top: 32px;
+
+      padding:
+        0
+        24px;
+
+      border-radius: 999px;
+
+      background: #fff;
+
+      color: #050507;
+
+      text-decoration: none;
+
+      font-size: 13px;
+      font-weight: 600;
+
+      transition:
+        transform .25s ease,
+        background .25s ease;
+    }
+
+    .home-button:hover {
+      transform: translateY(-2px);
+      background: #e9e9ec;
+    }
+
+    /* =========================
+       SCROLL ANIMATION
+       ========================= */
+
+    .reveal-video {
+      opacity: 0;
+
+      filter: blur(8px);
+
+      transform:
+        translateY(42px)
+        scale(.985);
+
+      transition:
+        opacity .9s cubic-bezier(.2,.7,.2,1),
+        transform .9s cubic-bezier(.2,.7,.2,1),
+        filter .8s ease;
+    }
+
+    .reveal-video.visible {
+      opacity: 1;
+
+      filter: blur(0);
+
+      transform:
+        translateY(0)
+        scale(1);
+    }
+
+    /* =========================
+       TABLET
+       ========================= */
+
+    @media (max-width: 900px) {
+
+      .video-header {
+        height: 64px;
+      }
+
+      .video-header-inner,
+      .video-main {
+        width: min(
+          calc(100% - 32px),
+          1280px
+        );
+      }
+
+      .video-main {
+        padding-top: 125px;
+      }
+
+      .video-heading {
+        font-size: clamp(
+          60px,
+          15vw,
+          108px
+        );
+      }
+
+      .video-intro {
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+
+        margin-bottom: 48px;
+      }
+
+      .video-meta {
+        justify-content: flex-start;
+      }
+
+      .video-bottom {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+      }
+    }
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 640px) {
+
+      .video-header {
+        height: 60px;
+      }
+
+      .video-header-inner,
+      .video-main {
+        width: calc(100% - 24px);
+      }
+
+      /* En celular ocultamos el símbolo,
+         igual que en la web principal */
+      .video-brand img {
+        display: none;
+      }
+
+      .video-brand {
+        gap: 0;
+      }
+
+      .video-brand span {
+        font-size: 23px;
+      }
+
+      .back-link span {
+        display: none;
+      }
+
+      .video-main {
+        padding:
+          104px
+          0
+          72px;
+      }
+
+      .video-eyebrow {
+        margin-bottom: 18px;
+
+        font-size: 9px;
+      }
+
+      .video-heading {
+        font-size: clamp(
+          54px,
+          17vw,
+          82px
+        );
+
+        line-height: .92;
+      }
+
+      .video-intro {
+        margin-top: 30px;
+        margin-bottom: 36px;
+      }
+
+      .video-intro p {
+        font-size: 16px;
+      }
+
+      .video-meta {
+        font-size: 8px;
+      }
+
+      .player-shell {
+        padding: 5px;
+
+        border-radius: 20px;
+      }
+
+      .video-player {
+        border-radius: 16px;
+      }
+
+      .video-bottom {
+        margin-top: 55px;
+        padding-top: 28px;
+      }
+
+      .video-bottom-content h2 {
+        font-size: 42px;
+      }
+
+      .home-button {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .reveal-video {
+        opacity: 1;
+        filter: none;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="video-header">
+
+    <div class="video-header-inner">
+
+      <a
+        href="../"
+        class="video-brand"
+        aria-label="Volver a SIRIUS"
+      >
+        <img
+          src="../assets/sirius-star-white-v2.png"
+          alt=""
+        >
+
+        <span>SIRIUS</span>
+      </a>
+
+      <a
+        href="../"
+        class="back-link"
+      >
+        ←
+        <span>Volver al inicio</span>
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <main class="video-main">
+
+    <!-- HERO -->
+
+    <section class="reveal-video">
+
+      <div class="video-eyebrow">
+        Presentación · SIRIUS
+      </div>
+
+      <h1 class="video-heading">
+        Conoce
+        <span>SIRIUS.</span>
+      </h1>
+
+      <div class="video-intro">
+
+        <p>
+          Descubre cómo ayudamos a pequeños negocios y
+          emprendimientos a construir una ruta digital
+          alrededor de sus necesidades reales.
+        </p>
+
+        <div class="video-meta">
+          Video presentación · 2026
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- VIDEO -->
+
+    <section
+      class="player-shell reveal-video"
+      aria-label="Video presentación de SIRIUS"
+    >
+
+      <div class="video-player">
+
+        <video
+          controls
+          playsinline
+          preload="metadata"
+        >
+
+          <source
+            src="https://www.dropbox.com/scl/fi/14lkcb2gih50nq75jfwuf/SIRIUS.mov?rlkey=k9c91tlwp3e29ssnadflovtbt&amp;st=mva5a4e4&amp;raw=1"
+            type="video/quicktime"
+          >
+
+          Tu navegador no puede reproducir este video.
+
+        </video>
+
+      </div>
+
+    </section>
+
+
+    <!-- DESCRIPCIÓN -->
+
+    <section class="video-bottom reveal-video">
+
+      <div class="video-bottom-label">
+        Nuestra propuesta
+      </div>
+
+      <div class="video-bottom-content">
+
+        <h2>
+          Una ruta digital<br>
+          a la medida.
+        </h2>
+
+        <p>
+          En SIRIUS comenzamos entendiendo el negocio.
+          Diagnosticamos su situación actual, identificamos
+          oportunidades y construimos una ruta digital con
+          las herramientas que realmente pueden aportar a
+          su visibilidad, conexión con clientes y crecimiento.
+        </p>
+
+        <a
+          href="../"
+          class="home-button"
+        >
+          Conocer más sobre SIRIUS
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script>
+    const revealItems =
+      document.querySelectorAll(".reveal-video");
+
+    const revealObserver =
+      new IntersectionObserver(
+        (entries) => {
+
+          entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add(
+                "visible"
+              );
+
+              revealObserver.unobserve(
+                entry.target
+              );
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+    revealItems.forEach((item) => {
+      revealObserver.observe(item);
+    });
+  </script>
+
+</body>
+</html>
